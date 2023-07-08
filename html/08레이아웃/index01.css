@@ -1,0 +1,103 @@
+@import url(reset.css);
+
+/* header */
+
+#main_header{
+    width: 960px;
+    margin: 0 auto;
+    height: 160px;
+    position: relative;
+    margin-top: 50px;
+}
+
+.main_gnb {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+
+.main_gnb > .box {overflow: hidden;}
+.main_gnb > .box > li {float: right; border: 1px solid #777;padding: 2px 10px; color: blue;}
+.main_gnb > .box > li:first-child {border-radius: 0 10px 10px 0}
+.main_gnb > .box > li:last-child {border-radius: 10px 0 0 10px;}
+.main_gnb > .box > li:hover {background: black; color: white;}
+.title {
+    position: absolute;
+    left: 10px;
+    top: 50px;
+}
+
+.sub_gnb {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+.sub_gnb > .box2 {overflow: hidden;}
+.sub_gnb > .box2 > li {float: right; border: 1px solid #777;padding: 5px 10px; color: blue;}
+.sub_gnb > .box2 > li:first-child {border-radius: 0 10px 10px 0}
+.sub_gnb > .box2 > li:last-child {border-radius: 10px 0 0 10px;}
+.sub_gnb > .box2 > li:hover {background: black; color: white;}
+
+/* main */
+#main_content {
+    width: 960px;
+    margin: 0 auto;
+    overflow: hidden;    
+}
+.main_section{
+    width: 750px;
+    float: left;
+}
+.main_section > .box {
+    border: 1px solid #777;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.main_article {
+    width:200px;
+    float: right;
+    border: 1px solid #777;
+}
+.main_article > .btn_area {
+    overflow: hidden;
+}
+.main_article > .btn_area > .left {
+    float: left;
+    width: 50%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 5px 0;
+}
+.tab_list li {padding: 10px;}
+.tab_list li a {
+    overflow: hidden;
+    display: block;
+}
+.tab_list li a .thumbnail{
+    float:left;
+}
+.tab_list li a .description{
+    float:left;
+    margin-left: 10px;
+}
+.tab_list li a .description strong {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 120px;
+    overflow: hidden;
+}
+
+/* footer */
+#main_footer {
+    border: 1px solid #777;
+    text-align: center;
+    width: 960px;
+    margin: 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-bottom: 500px;
+}
+    

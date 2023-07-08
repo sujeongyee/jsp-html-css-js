@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        ul li {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    
+    <h3>다중이벤트 처리</h3>
+    <div>
+        <ul class = "list">
+            <li><img src="../03엘리먼트선택/img/1.jpg" alt="1" width="100"></li>
+            <li><img src="../03엘리먼트선택/img/2.jpg" alt="1" width="100"></li>
+            <li><img src="../03엘리먼트선택/img/3.jpg" alt="1" width="100"></li>
+            <li><img src="../03엘리먼트선택/img/4.jpg" alt="1" width="100"></li>
+        </ul>
+        결과:
+        <div class="result">
+            <img src="../03엘리먼트선택/img/1.jpg" alt="결과" width="300" >
+        </div>
+    </div>
+
+    <script>
+
+        var imgs = document.querySelectorAll(".list > li > img");
+        var img = document.querySelector(".result > img");
+
+        for(var i = 0 ; i < imgs.length ; i++){
+            imgs[i].onclick = function(){
+                img.src = event.target.src;
+            }
+        }
+
+    </script>
+
+
+
+</body>
+</html>

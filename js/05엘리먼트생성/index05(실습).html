@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>삭제 버튼은 만들 당시에 이벤트를 걸면 됩니다</h1>
+    <h1>input은 지우는게 아니라 display를 제어하세요</h1>
+    <h1>할일 목록 만들기</h1>
+    <div class = "name2">
+        <input type = "text" placeholder="이름을 입력하세요">
+        <button id = "btn1">확인</button>
+    </div>
+    
+    <div class = "todo">
+        <input type = "text" placeholder="당신의 할일을 적으세요">
+        <button id = "btn2">확인</button>
+        <ul id = "here">
+        </ul>
+    </div>
+
+
+    <script>
+        var btn1 = document.getElementById("btn1");
+        var btn2 = document.getElementById("btn2");
+   
+        btn1.onclick = function(){
+            var name2  = document.querySelector(".name2");
+            var input = document.querySelector(".name2 > input");
+            var btn = document.createElement('button');           
+            name2.innerHTML = "<h1>"+input.value + "님 안녕하세요<h1>";
+        }
+        btn2.onclick = function(){        
+            var input = document.querySelector(".todo > input"); 
+            var here = document.getElementById("here");
+            var li = document.createElement('li');
+            li.innerHTML = input.value;          
+            var button = document.createElement('button');
+            button.innerHTML = 'X';
+            button.addEventListener('click',function(){
+                here.removeChild(li);
+            });           
+            li.appendChild(button);
+            here.appendChild(li);           
+        }
+
+        
+       
+
+    </script>
+</body>
+</html>

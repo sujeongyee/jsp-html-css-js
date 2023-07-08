@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>리다이렉트 된 결과(서버 상태여야 합니다)</h3>
+
+    <script>
+        
+
+        //카카오 서버에서 인가 코드를 url주소에 담아서 보내줍니다.
+        //3.인가 코드 얻기
+
+        var urlSearch = new URLSearchParams(location.search);
+
+        var value = urlSearch.get('code');
+
+        console.log(value);
+
+        if(value != null){
+            ajax();
+        }
+
+        function ajax(){
+            
+            var url = 'http://127.0.0.1:5500/11jsAPI/index03.html';
+            var key = '8ba0f432058bcc86e774cc7b8f7b4029'; // restApi 
+
+            var data = "grant_type=authorization_code" +
+                       "&client_id="+key+
+                       "&redirect_uri="+url+
+                       "&code="+value;
+
+            //4. 토큰 발급 받기
+            //fetch 포스트 형식은 첫번째 매개변수에 url 두번째 매개변수에
+            //정보 입력하기
+            fetch('https://kauth.kakao.com/oauth/token',{
+                method:"post",
+                headers:{'Content-Type':'application/x-www-form-urlencoded;charset=utf-8'}, // 폼형식
+                body:data
+            }).then(function(response){
+                return response.json();
+            }).then(function(data){               
+                //브라우저 종료시에 모두 삭제
+                //쿠키 & 세션스토리지에 토큰 값 저장
+                sessionStorage.setItem("kakao_access",data.access_token);  
+
+                //사용자 정보 API호출하기
+                getUser(data.access_token);             
+            });
+
+            //5. 토큰기반으로 API 호출하기 JS로 처리
+            function getUser(token){
+                fetch('https://kapi.kakao.com/v2/user/me',{
+                    method:'post',
+                    headers : {
+                        'Authorization': 'Bearer '+token,
+                        'Content-Type' : 'application/x-www-form-urlencoded;charset=utf-8',
+                    },
+                })
+                .then(function(response){
+                    return response.json();
+                })
+                .then(function(data){
+                    console.log(data);
+                })
+            }
+
+
+
+
+
+
+
+
+        }
+
+    </script>
+
+
+</body>
+</html>

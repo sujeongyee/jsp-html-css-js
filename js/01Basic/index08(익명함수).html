@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        var func = function(){
+            console.log('익명 함수 호출');
+        }
+
+        func();
+
+        var func2 = function(a,b){
+            return a+b;
+        }
+        console.log(func2(1,10));
+        
+
+        console.log('-----------------------------');
+
+        //1.
+        var method = function(a){
+            console.log('매개변수 : ',a);
+            if(a%2==0){
+                console.log("짝수");
+            }else{
+                console.log('홀수');
+            }
+        }
+
+        //2.
+        var point = function(a,b,c,d){
+            console.log('매개변수:',a,b,c,d);
+            return a+'님의 평균은 :'+parseInt((b+c+d)/3);
+        }
+
+        method(10);
+        console.log(point('홍길동',88,90,90));
+
+
+
+
+        
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

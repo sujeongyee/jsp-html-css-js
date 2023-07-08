@@ -1,0 +1,182 @@
+
+body {
+    margin: 0 auto;
+}
+#header_head {border-top: 4px solid green;}
+.box1 {border-bottom: 1px solid #a7a7a7;}
+.box2 {overflow: hidden; margin: 0 auto; width: 1008px;}
+
+.box2 > .left {float: left; font-size: 12px;padding: 11px 4px;color: #999;}
+.box2 > .right {float: right; display: block;  font-size: 12px;  padding: 11px 4px;}
+.right > li {display: inline-block; border-left: 1px solid #777; font-weight: 700;}
+.right > li > a {text-decoration: none; padding: 11px 7px; color: #999; }
+
+.header_middle {width: 1008px; margin: 0 auto; overflow: hidden;}
+.header_middle > .left {float: left;}
+.header_middle > .left2 {
+    float:left ;
+    border: none;
+    background-image: url(melon/melon_search.png);
+    width: 330px;
+    height: 40px;
+    margin: 36px 0 0 11px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+.header_middle > .left2 > input[type = text] {
+    outline: none;
+    width: 260px;
+    height: 25px;
+    margin: 8px 0 0 18px;
+    border: none;
+}
+.header_middle > .right{
+    float: right;
+    margin-top: 15px;
+} 
+
+.left2 > .btn {
+    float: right;
+    background-image: url(melon/melon_btn.png);
+    height: 40px;
+    width: 45px;
+    border: none;
+    margin: 0;
+    cursor: pointer;
+    background-color: white;
+}
+
+.box3 {
+    border-bottom: 1px solid #959595;
+}
+
+.header_foot {
+    width: 1008px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.header_foot > .left {
+    overflow: hidden;
+    float: left;
+
+}
+.header_foot > .left > a {
+    display: inline-block; 
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    width: 75px;
+    height: 40px;
+    color: black;
+}
+
+.header_foot > .right {
+    float: right;
+    font-size: 15px;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+    width: 75px;
+    height: 40px;
+}
+
+
+
+
+section .wrap {width: 1008px; margin: 0 auto; margin-top: 40px;}
+
+section .content {overflow: hidden;}
+section .content .list_wrap {width: 480px; float: left;}
+section .content .slide_wrap {width: 236px; float: left;}
+section .content .user_wrap {width: 280px; float: left;}
+
+.list_wrap ul {overflow: hidden;}
+.list_wrap ul li {float: left; width: 33.333%; position: relative;}
+
+.list_wrap ul li a {position: relative;}
+.list_wrap ul li a .singer {
+    position: absolute;
+    left: 0;
+    bottom: 4px;    
+    color: white;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    height: 22px;
+    line-height: 22px;
+    opacity: 0.7;
+}
+.list_wrap ul li .hover_cont { 
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 155px;
+    height: 155px;
+    background-color: black;
+    opacity: 0; /* 호버가 닿으면 1로 변경*/
+    z-index: 10; /* 가장 위쪽*/
+    transition: opacity .5s ease-in-out ;
+}
+
+.list_wrap ul li .hover_cont a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    display: inline-block;
+    padding-top: 50px;
+    width: 100%;
+    text-align: center;
+    
+}
+
+/* 호버 */
+.list_wrap ul li:hover > .hover_cont {
+    opacity: 1;
+    
+}
+
+.slide_wrap {margin-left: 4px;}
+
+.user_wrap {margin-left: 8px; height: 118px;}
+.user_wrap > .login_wrap {
+    border: 1px solid #ddd;
+    padding: 0 17px;
+    height: 117px;
+}
+
+.user_wrap > .promotion_wrap {
+    margin-top: 8px;
+}
+
+.login_wrap .top {overflow: hidden; padding: 24px 0 15px 0; height: 39px; box-sizing: border-box;}
+.login_wrap .top .left{float: left; font-size: 11px; color: #939393;}
+.login_wrap .top .right{float: right; font-size: 11px; color: #939393;}
+
+.login_wrap > .login_btn {
+    background-color: #00d344;
+    color: white;
+    width: 100%;
+    border: none;
+    height: 42px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.middle_img {margin: 0 auto; width: 1008px;}
+
+.middle_img > img {padding-top: 20px;}
+
+.issue {
+    margin-top: 20px;
+    float: left;
+    width: 704px;
+}
+.issue { float: left;}
+.issue_co {display: block; padding: 5px 0; border-bottom: 1px solid #777; }
+.issue_co > span {font-size: 9px; color: #999;}
+.issue > ul {overflow: hidden;}
+.issue_list {float: left; height: 223px; margin: 16px 0 0 16px; margin-left: 0; }
+

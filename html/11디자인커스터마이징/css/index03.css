@@ -1,0 +1,50 @@
+.my-page{
+    width: 1170px;
+    margin: 0 auto;
+    
+}
+.top {border-bottom: 1px solid #ddd; margin-bottom: 20px;}
+.my-page>.top>h2,.my-page>.top>h6 {display: inline-block; }
+
+.box1 {overflow: hidden; margin-bottom: 100px;}
+.r-top {height: 345px;}
+.box1> .left {
+    float: left;
+    width: 50%;
+}
+.box1> .right {
+    float: right;
+    width: 50%;
+}
+
+.info > p {font-size: 25px; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin-bottom: 5px;}
+.price > p {font-size: 35px; font-weight: 20px; border-bottom: 1px solid #ddd; padding: 10px 0 10px;}
+.delievery > p {font-size: 14px; margin-bottom: 0; color: #888;}
+
+.r-mid {overflow: hidden;}
+.r-mid > .left{float: left; font-size: 20px;}
+.r-mid > .right{float: right; font-size: 30px; font-weight: bold;}
+
+.order {overflow: hidden;}
+.order > button { outline: none; border: 1px solid #ddd; padding: 15px 5px; }
+.order > button:focus {outline: none; border: none;}
+.order > .left-btn {float: left; width: 50%;}
+.order > .right-btn {float: right; width: 50%;}
+
+.border {width: 100%; border: 1px solid #ddd; background-color: #f5f5f5; height: 200px; padding: 15px;}
+
+.b-top{overflow: hidden;}
+.b-top > .left {float: left;}
+.b-top > .right {float: right; position: relative;}
+.b-top > .right > textarea {
+    width: 1048px;
+    resize: none;
+    height: 90px;
+    border: 1px solid #ddd;
+}
+
+.form-group {margin-bottom: 5px;}
+.form-group>input {width: 200px; font-size: 20px;}
+
+
+.right > button {position: absolute; right: 10px; bottom: 45px; width: 80px; font-size: 17px;}

@@ -1,0 +1,189 @@
+input,
+button,
+label,
+textarea,
+select {
+    vertical-align: middle;
+}
+
+#content {
+    width: 1020px;
+    height: 2353px;
+    margin: 0 auto;
+
+}
+
+.head_tag {
+    font-size: 30px;
+    margin-bottom: 30px;
+
+}
+
+.text2 {
+    width: 100px;
+    height: 24px;
+    line-height: 50px;
+    margin-bottom: 45px;
+}
+
+.tb_search {
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid #e1e1e1;
+    border-bottom: 0;
+    font-size: 14px;
+}
+
+.tb_search th {
+    border-right: 1px solid #e1e1e1;
+    width: 100px;
+}
+
+.tb_search th,
+.tb_search td {
+    border-bottom: 1px solid #e1e1e1;
+    padding: 10px 10px 10px 20px;
+    height: 30px;
+    text-align: left;
+}
+
+.tb_search input[type=text] {
+    width: 70px;
+    height: 24px;
+    margin: 4px;
+}
+
+.job_select {
+    width: 140px;
+    height: 27px;
+}
+
+.input_carrer {
+    width: 50px;
+}
+
+#content_tbody {
+    font-size: 14px;
+}
+
+.search_btn {
+    background-color: #505050;
+    color: #fff;
+    border: 1px solid #414141;
+    height: 30px;
+    padding: 0 16px;
+    text-decoration: none;
+    margin: 0 auto;
+    display: inline-block;
+    line-height: 28px;
+    vertical-align: middle;
+}
+
+.search_btn_ {
+    margin-top: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.tit1{
+    height: 34px;
+    margin: 50px 0 20px;
+    padding-left: 28px;
+    color: #333;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: -1px;
+    background: url(/miniproject/imgsj/bul_tit1.gif) no-repeat 0;
+}
+.tb_list {
+    border: none;
+    width: 100%;
+    border-top: 3px solid #4c4a4a;
+    font-size: 14px;
+    height: 200px;
+}
+.tb_list th{
+    border: none;
+    padding: 8px 5px;
+    height: 29px;
+    line-height: 20px;
+    text-align: center;            
+}
+.tb_list tr {
+    width: 100%;
+}
+.tb_list_{
+    width: 1020px;
+}
+
+.pagination{
+    margin-top: 60px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.pagination .direction{
+    width: 43px;
+    padding: 0;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.pagination a{
+    display: inline-block;
+    min-width: 37px;
+    height: 43px;
+    padding: 0 3px;
+    border: 1px solid #ccc;
+    line-height: 43px;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+.pagination .first{
+    background: url(/miniproject/imgsj/btn_paging_first.gif) no-repeat;
+}
+.pagination .prev{
+    background: url(/miniproject/imgsj/btn_paging_prev.gif) no-repeat;
+}
+.pagination .next{
+    background: url(/miniproject/imgsj/btn_paging_next.gif) no-repeat;
+}
+.pagination .last{
+    background: url(/miniproject/imgsj/btn_paging_last.gif) no-repeat;
+}
+
+#employee_list{
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+#employee_list tr{
+    
+    box-sizing: border-box;
+    margin-bottom: 100px;           
+}
+
+.list_info > td{
+    padding: 10px;
+    border-bottom: 1px solid #cbcbcb;
+    padding: 8px 5px; 
+    height: 29px;
+    line-height: 20px;
+    margin: 0;
+    text-align: center;
+    border-spacing: 0;              
+}
+.f_title {
+    width: 440px;
+}
+.f_time{
+    width:100px
+}
+.num1{
+    border: 1px solid #097dd4;
+    background-color: #097dd4;
+    color:white;
+}
+

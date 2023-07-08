@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 부트스트랩css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- 제이쿼리 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- 부트스트랩js -->
+    <script src="js/bootstrap.min.js"></script>
+
+    
+
+</head>
+<body>
+
+    <button type="button" class="btn">Basic</button>
+    <button type="button" class="btn btn-default">Default</button>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-link">Link</button>
+
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+        </ul>
+    </div>
+
+    <hr/>
+
+    <h3>그리드시스템</h3>
+
+    <style>
+        .back {
+            border: 1px solid #777;
+        }
+    </style>
+
+    
+    <!-- container는 양옆 여백, container-fluid 전체 영역 -->
+    <div class = "container">
+        <div class = "row">
+            <div class = "col-sm-3 back"> 박스1</div>
+            <div class = "col-sm-3 back"> 박스1</div>
+            <div class = "col-sm-3 back"> 박스1</div>
+            <div class = "col-sm-3 back"> 박스1</div>               
+        </div>
+    </div>
+
+    <!-- lg 이상에서 4등분 , sm 이상에서 3등분-->
+    <div class = "container-fluid">
+        <div class = "row">
+            <div class = "col-lg-3 col-sm-4 back">박스</div>
+            <div class = "col-lg-3 col-sm-4 back">박스</div>
+            <div class = "col-lg-3 col-sm-4 back">박스</div>
+            <div class = "col-lg-3 col-sm-4 back">박스</div>
+            <div class = "col-lg-3 col-sm-4 back">박스</div>
+            <div class = "col-lg-3 col-sm-4 back">박스</div>
+            <div class = "col-lg-3 col-sm-4 back">박스</div>
+            <div class = "col-lg-3 col-sm-4 back">박스</div>
+            <div class = "col-lg-3 col-sm-4 back">박스</div>
+        </div>
+    </div>
+
+    <!-- 휴대폰(xs -1) , 브라우저 사이즈(sm - 4)를 고려한 반응형 
+ 
+    -->
+    <div class="container">
+        <div class = "row">
+            <div class = "col-xs-12 col-sm-3 back">박스</div>
+            <div class = "col-xs-12 col-sm-3 back">박스</div>
+            <div class = "col-xs-12 col-sm-3 back">박스</div>
+            <div class = "col-xs-12 col-sm-3 back">박스</div>
+        </div>
+    </div>
+
+
+
+
+
+
+    
+</body>
+</html>

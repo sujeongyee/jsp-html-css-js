@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            border: 1px solid #777;           
+        }
+
+        .box > .card {
+            float: left;
+            width: 25%;
+            border: 1px solid #777;
+            box-sizing: border-box;
+        }
+        .content {
+            overflow: hidden;
+        }
+        .content  .left {
+            float:left;
+            padding: 0; margin: 0;
+            list-style: 0;
+        }
+        .content .right {
+            float: right;
+        }
+
+        .btn-area{overflow: hidden;}
+        .btn-area .left{float: left; width: 50%;}
+        .btn-area .right{float:right; width: 50%;}
+
+    </style>
+
+</head>
+<body>
+
+    <div class = "box">
+        <div class="card">
+            <img src = "img/bgimg.png" alt = "상품"> 
+            <div class = "content"> <!--글영역 (부모영역)-->
+                <ul class = "left">
+                    <li>좌측</li>
+                    <li>좌측</li>
+                    <li>좌측</li>
+                </ul>
+                <strong class = "right">우측</strong>   
+                
+                <!--float의 영향을 받지 않게 함 -->
+                <div style = "clear: both;">
+                    가격영역
+                </div>
+
+            </div>
+            <div>
+                가격영역
+            </div>
+
+            <div class = "btn-area">
+                <button class = "left">장바구니</button>
+                <button class = "right">구매하기</button>
+            </div>
+
+        </div>
+        <div class="card">
+            <img src = "img/bgimg.png" alt = "상품"> 
+            <div class = "content"> <!--글영역 (부모영역)-->
+                <ul class = "left">
+                    <li>좌측</li>
+                    <li>좌측</li>
+                    <li>좌측</li>
+                </ul>
+                <strong class = "right">우측</strong>   
+                
+                <!--float의 영향을 받지 않게 함 -->
+                <div style = "clear: both;">
+                    가격영역
+                </div>
+
+            </div>
+            <div>
+                가격영역
+            </div>
+
+            <div class = "btn-area">
+                <button class = "left">장바구니</button>
+                <button class = "right">구매하기</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src = "img/bgimg.png" alt = "상품"> 
+            <div class = "content"> <!--글영역 (부모영역)-->
+                <ul class = "left">
+                    <li>좌측</li>
+                    <li>좌측</li>
+                    <li>좌측</li>
+                </ul>
+                <strong class = "right">우측</strong>   
+                
+                <!--float의 영향을 받지 않게 함 -->
+                <div style = "clear: both;">
+                    가격영역
+                </div>
+
+            </div>
+            <div>
+                가격영역
+            </div>
+
+            <div class = "btn-area">
+                <button class = "left">장바구니</button>
+                <button class = "right">구매하기</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src = "img/bgimg.png" alt = "상품"> 
+            <div class = "content"> <!--글영역 (부모영역)-->
+                <ul class = "left">
+                    <li>좌측</li>
+                    <li>좌측</li>
+                    <li>좌측</li>
+                </ul>
+                <strong class = "right">우측</strong>   
+                
+                <!--float의 영향을 받지 않게 함 -->
+                <div style = "clear: both;">
+                    가격영역
+                </div>
+
+            </div>
+            <div>
+                가격영역
+            </div>
+
+            <div class = "btn-area">
+                <button class = "left">장바구니</button>
+                <button class = "right">구매하기</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

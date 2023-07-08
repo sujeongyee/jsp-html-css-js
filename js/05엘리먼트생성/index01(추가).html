@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class = "box1">
+        <p>기존에 존재하던 태크</p>
+    </div>
+    <button id = "btn">innerHTML</button>
+
+    <script>
+        var btn = document.getElementById("btn");
+        var box1 = document.querySelector(".box1");
+
+        btn.onclick = function(){
+            box1.innerHTML = '메롱메롱';
+        }
+    </script>
+
+    <hr/>
+
+    <div class = "box2">
+        <!-- <input type = "checkbox" name = "aaa" class = "bbb" checked> -->
+    </div>
+    <button id = "btn2">innerHTML2</button>
+
+    <script>
+        var btn2 = document.getElementById("btn2");
+        var box2 = document.querySelector(".box2");
+        btn2.onclick = function(){
+            box2.innerHTML = '<input type = "checkbox" name = "aaa" class = "bbb" checked> 체크박스';
+        }
+
+    </script>
+
+    <div class = "box3">
+        
+    </div>
+    <button id = "btn3">innerHTML3</button>
+
+    <script>
+        var btn3 = document.getElementById("btn3");
+        var box3 = document.querySelector(".box3");
+        btn3.onclick = function(){
+            var sum = ""
+            for(var i = 0 ; i < 10 ; i++){
+                sum += '<input type = "checkbox" name = "aaa" class = "bbb" checked> 체크박스';
+            }
+            box3.innerHTML = sum;
+            
+        }
+
+    </script>
+
+</body>
+</html>

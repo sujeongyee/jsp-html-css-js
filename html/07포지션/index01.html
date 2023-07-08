@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * { padding: 0; margin: 0;}
+        .list {margin: 0 auto; width: 500px; }
+        .content {position: relative;}
+        p{
+            border: 1px solid #777;
+            height: 100px;
+        }
+        .a1 {background-color:  yellow;}
+        .a2 { 
+            background-color: red;
+            /* 첫번째 규칙은 - absolute*/
+            /* 포지션의 위치기반이 될 부모태그에 relative 선언*/
+            position: absolute; /*절대좌표 기준(body영역)으로 z축으로 끌어올린다*/
+           left: 70px;
+           top: 0;
+           width: 50px;
+           height: 50px;
+        }
+        .a3{background-color: blue;}
+        .a4{background-color: coral;
+            position:absolute;
+            width: 40px;
+            height: 40px;
+        right: 0;
+        top: 0;}
+    </style>
+
+</head>
+<body>
+    <div class = "list">
+        <div class = "content">
+            <p class = "a1">언니</p>
+            <p class = "a2">김민철수</p>
+            <p class = "a3">나</p>
+            <p class = "a4">동훈퐉</p>
+        </div>
+    </div> 
+</body>
+</html>

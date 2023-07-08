@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "popup(쌤).js"></script>
+    <style>
+        body {
+            background-color: rgb(225, 212, 237);
+        }
+    </style>
+</head>
+<body>
+    
+    팝업창
+    <input type="checkbox" id = "popupClose">오늘하루 이창을 열지 않기
+    
+    
+    <script>
+
+        var popupClose = document.getElementById("popupClose");
+        popupClose.onclick = function(){
+            console.log('여기까지는 오니');
+            //쿠키 생성 //onclick =addCookie();
+            addCookie('main_popup',true);
+            window.close();
+        }
+    </script>
+    
+</body>
+</html>

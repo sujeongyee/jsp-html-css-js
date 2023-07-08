@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>최신 관심 목록</h3>
+    <div class="cartList">
+
+    </div>
+
+    <script>
+        var cartList = document.querySelector('.cartList');
+        if(localStorage.length == 0){
+            cartList.innerHTML = "최신 정보가 없습니다";
+        }else{
+            for(var i =  0; i <localStorage.length; i++){
+            var src =  localStorage.getItem('img'+(i+1));
+            cartList.innerHTML += '<img src="'+src+'" width="300">';
+            }
+        }
+            
+
+    </script>
+
+</body>
+</html>

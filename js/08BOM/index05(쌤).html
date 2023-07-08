@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+		body { background-size: cover}
+        .bgImg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1; /*z방향 가장 아래로*/
+            animation: fadeIn .5s linear; /*아래 키프레스 fadeIn호출*/
+        }
+
+
+        .clock h2 {color: #ffffff; text-align:center; margin-top: 300px; font-size: 200px;}
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body data-img='{"1": "img/1.jpg", "2":"img/2.jpg", "3": "img/3.jpg", "4": "img/4.jpg"}'>
+
+    <div class="clock">
+        <h2>00:00:00</h2>
+    </div>
+    <img src="img/1.jpg" class= "bgImg">
+
+
+    <script>
+        var clock = document.querySelector('.clock > h2');
+        var count = 0;
+        function createImg(){
+
+            var data = document.body.dataset.img;
+            var obj = JSON.parse(data);
+
+            //img
+            var img = document.createElement("img");
+            img.src= obj[++count];
+            img.classList.add("bgImg");
+
+            document.body.appendChild(img);
+            //if(count==4) count=0;
+            if(Object.keys(obj).length == count) count=0;
+        }
+
+        
+        (function(){
+            createImg();
+            createTime();
+            setInterval(createImg,10000);
+            setInterval(createTime,1000);
+        })();
+
+        function createTime(){
+            var date = new Date();
+            var hour = date.getHours();
+            var minute = date.getMinutes();
+            var second = date.getSeconds();
+            var result =(hour<10?"0"+hour:hour)+":"+
+                        (minute<10?"0"+minute:minute)+":"+
+                        (second<10?"0"+second:second);
+            clock.innerHTML = result;
+        }
+
+    </script>
+    
+</body>
+</html>

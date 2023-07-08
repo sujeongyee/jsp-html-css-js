@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .head{
+            height: 300px;
+        }
+        .box{
+            height: 500px;
+            border: 1px solid #777;
+            background-image: url('img/17.jpg');
+           
+            background-size: 100px;
+            background-size: cover;/*빈공간 없이 꽉 채움*/
+            background-size: contain; /*이미지가 잘리지 않도록*/
+            
+
+            background-attachment: scroll; /*뒷배경이 스크롤 따라서 움직인다*/
+            background-attachment: fixed;
+        }
+        .footer{
+            height: 300px;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    <div class = "head">
+        헤더
+    </div>
+    <div class = "box">
+        본문
+    </div>
+    <div class ="foot">
+        푸터
+    </div>
+
+</body>
+</html>

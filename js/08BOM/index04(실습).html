@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .bgImg{animation: fadeIn 2s ease-in-out;}
+
+        @keyframes fadeIn {
+            from{
+                opacity: 0;
+            }to{
+                opacity: 1;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <!--애니메이션이 새롭게 적용되려면 , img태그를 새롭게 생성-->
+    <div class = "slide">
+        <img src = "img/slide1.jpg" class = "bgImg">
+    </div>
+
+
+    <script>
+        setInterval(changeImg,2000);
+        var num = 1;
+        function changeImg(){
+            //2초마다 이미지 태그가 생성
+            var img = document.createElement("img");
+            img.src = 'img/slide'+ ++num +'.jpg';
+            img.className = "bgImg";
+            
+            //기존 이미지 삭제
+            var slide = document.querySelector(".slide");
+            slide.firstElementChild.remove();
+            
+            slide.appendChild(img);
+            
+            if(num ==4)  num=0;
+
+        }
+
+
+    </script>
+
+    <!-- <script>
+        var bgImg = document.querySelector(".bgImg");
+        var div = document.querySelector("div");
+        var arr = ['slide2.jpg','slide3.jpg','slide4.jpg','slide1.jpg'];
+        var i = 0;
+        setInterval(change,2000)
+
+        function change(){
+            div.innerHTML = '<img src = "img/'+arr[i]+'" class = "bgImg">';
+            i++;
+            if(i>3){
+                i=0;
+            }
+        }
+    </script> -->
+
+    <!-- <div>
+        <img src = "img/slide1.jpg" class = "bgImg here">
+        <img src = "img/slide2.jpg" class = "bgImg" style="display: none;">
+        <img src = "img/slide3.jpg" class = "bgImg" style="display: none;">
+        <img src = "img/slide4.jpg" class = "bgImg" style="display: none;">
+    </div>
+
+    <script>
+        setInterval(change,2000);
+        function change(){
+            var here = document.querySelector(".here");
+            here.style.display = 'none';
+            here.classList.remove("here")
+
+            if(here.nextElementSibling == null){
+                here.parentElement.firstElementChild.style.display = 'block';
+                here.parentElement.firstElementChild.classList.add("here");
+            }else{
+                here.nextElementSibling.style.display = 'block';
+                here.nextElementSibling.classList.add("here");
+            }           
+        }
+
+        
+    </script> -->
+    
+</body>
+</html>

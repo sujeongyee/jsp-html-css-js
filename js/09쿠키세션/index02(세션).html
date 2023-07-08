@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>
+        로컬스토리지 vs 세션스토리지는 브라우저 내에 키 = 값을 저장하는 브라우저측 세션입니다
+        <br/>
+        로컬스토리지 = 브라우저를 종료하더라도 유지 됩니다.
+        <br/>
+        세션스토리지 = 브라우저를 종료하면 사라집니다.
+    </h3>
+
+    <button id = "createSession">세션만들기</button>
+    <button id = "removeSession">세션삭제하기</button>
+    <button id = "getSession">세션값 확인하기</button>
+
+    <script>
+        var createSession = document.getElementById('createSession');
+        var removeSession = document.getElementById('removeSession');
+
+        createSession.onclick = function(){
+            localStorage.setItem('aaa','홍길동');
+            localStorage.setItem('bbb','이순신');
+            localStorage.setItem('ccc',JSON.stringify([1,2,3,4,5]));
+        }
+
+        var getSession = document.getElementById('getSession');
+        getSession.onclick = function(){
+            var result = localStorage.getItem("ccc");
+            console.log(result); // 키를 넣으면 값을 반환
+            console.log('로컬스토리지 크기 : '+localStorage.length);
+            console.log('로컬스토리지 key : '+localStorage.key(1));
+        }
+
+        removeSession.onclick = function(){
+            localStorage.removeItem('aaa');
+            localStorage.clear();
+
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,108 @@
+/* 디자인 시작전에 공통적으로 선언 */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body, html {
+    font-family: 'Orbit', sans-serif;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+ul, li, ol, dd, dl {
+    list-style: none;
+}
+input, textarea, select, button {
+    /* 브라우저 별로 기본디자인을 제거해서 동일한 디자인으로 보여질 수 있도록 선언 */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* border: none; */
+}
+
+.form-control {border-radius: 0;}
+.btn {border-radius: 0;}
+
+
+/* #############header############## */
+.my-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.my-nav {
+    background-color: #263238;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+}
+.my-nav .navbar-nav > li > a {
+    color: #fff;
+}
+.my-nav .navbar-nav > li > a:hover {
+    background-color: #222;
+}
+.my-nav .navbar-brand {padding: 0 20px;}
+.my-nav .navbar-brand img {
+    height: 50px;
+}
+
+/* ############article############# */
+.my-article {margin-top: 50px;}
+
+.carousel-control.right {
+    background-image: linear-gradient(to right,rgba(0,0,0, 0) 0,rgba(0,0,0,0) 100%);
+}
+
+.carousel-control.left {
+    background-image: linear-gradient(to left,rgba(0,0,0, 0) 0,rgba(0,0,0,0) 100%);
+}
+
+/* ############section############# */
+.prod-list {padding: 5px; border: 1px solid #ddd;}
+.prod-list > li[class*="col-"] {
+    padding: 5px; /* li태그중 class속성에 col- 이 포함된 태그 */
+}
+
+.prod-link {
+    display: block;
+    border: 1px solid #ddd;
+    text-align: center;
+    position: relative;
+}
+.prod-link > .arrow {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    color: #fff;
+    background-color: #ddd;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+}
+.prod-link > .hover {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    color: #fff;
+    background-color: #4285F4;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    opacity: 0;
+}
+
+.prod-link:hover > .arrow {
+    opacity: 0;
+}
+.prod-link:hover > .hover {
+    opacity: 1;
+}
+.prod-link:hover {
+    border-color: #4285F4;
+}
+

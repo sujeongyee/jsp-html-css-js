@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {padding: 0; margin: 0;}
+        header {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            background-color: rgb(252, 185, 252);
+            text-align: center;
+        }
+        .inner1 {background-color:tomato ;height: 500px; margin-top: 120px;}
+        .inner2 {
+            background-color: greenyellow;
+            position: sticky;
+            top:121px ; /*fixed로 변할 높이를 지정*/
+            /*sticky사용시에는 부모영역에 overflow : hidden이 있으면 안됨.*/
+        }
+
+        .inner3 {background-color: dodgerblue;height: 1000px;}
+    </style>
+</head>
+<body>
+    <header>
+        <img src = "img/bgimg.png" alt = "">
+        <nav>메뉴...</nav>
+    </header>
+
+    <section>
+        <div class = "inner1">상단부분</div>
+        <div class = "inner2">sticky영역</div>
+        <div class = "inner3">하단영역</div>
+    </section>
+    
+</body>
+</html>

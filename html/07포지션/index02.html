@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {padding:0;margin: 0;}
+        ul,li {list-style: none; }
+        .list{
+            overflow: hidden;
+            width:800px;
+            border: 1px solid #777;
+            margin: 0 auto;
+        }
+        .list li {
+            float: left;
+            width: 25.0000%;
+            height: 100px;
+            border: 1px solid #777;
+            box-sizing: border-box;
+        }
+        .list .pos {
+            background-color: aqua;
+            position: relative; /* 나의 현재위치(상대위치) 에서 z축으로 올린다*/
+            left: 10px;
+            top: 10px;
+        }
+
+        .list .abs{
+            background-color: cornflowerblue;
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+        }
+
+        .top{
+            border: 1px solid #777;
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <ul class = "list" style="position: relative;">
+        <li >박스
+            <p class = "abs">포지션</p>
+        </li>
+        <li>박스</li>
+        <li>박스</li>
+        <li>박스
+            <p class = "pos">포지션</p>
+        </li>
+    </ul>
+
+    <article class = "top">
+        TOP
+    </article>
+    
+</body>
+</html>

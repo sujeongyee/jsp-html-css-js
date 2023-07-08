@@ -1,0 +1,110 @@
+
+@import url('reset.css');
+
+/* #############header############## */
+.my-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+}
+.my-nav {
+    background-color: #263238;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+}
+.my-nav .navbar-nav > li > a {
+    color: #fff;
+}
+.my-nav .navbar-nav > li > a:hover {
+    background-color: #222;
+}
+.my-nav .navbar-brand {padding: 0 20px;}
+.my-nav .navbar-brand img {
+    height: 50px;
+}
+
+/* ############article############# */
+.my-article {margin-top: 50px;}
+
+.carousel-control.right {
+    background-image: linear-gradient(to right,rgba(0,0,0, 0) 0,rgba(0,0,0,0) 100%);
+}
+
+.carousel-control.left {
+    background-image: linear-gradient(to left,rgba(0,0,0, 0) 0,rgba(0,0,0,0) 100%);
+}
+
+/* ############section############# */
+.prod-list {padding: 5px; border: 1px solid #ddd;}
+.prod-list > li[class*="col-"] {
+    padding: 5px; /* li태그중 class속성에 col- 이 포함된 태그 */
+}
+
+.prod-link {
+    display: block;
+    border: 1px solid #ddd;
+    text-align: center;
+    position: relative;
+}
+.prod-link > .arrow {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    color: #fff;
+    background-color: #ddd;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+}
+.prod-link > .hover {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    color: #fff;
+    background-color: #4285F4;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    opacity: 0;
+}
+
+.prod-link:hover > .arrow {
+    opacity: 0;
+}
+.prod-link:hover > .hover {
+    opacity: 1;
+}
+.prod-link:hover {
+    border-color: #4285F4;
+}
+
+
+.blog-list > li[class*="col-"] {
+    width: 20%;
+    padding-left: 0;
+}
+
+
+.blog-link {display:block;border: 1px solid #ddd; text-decoration: none; position: relative;}
+.blog-link > a {text-decoration: none;}
+.blog-link > .title {padding: 10px 10px; font-size: 20px; height: 88px;  color: #222;text-overflow: ellipsis;overflow: hidden; text-align: center; }
+.blog-link:hover {text-decoration: none;}
+
+.title > span {display: inline-block ; }
+
+.box{overflow: hidden; padding: 10px 10px; margin-top: 5px;}
+.box > .star {float: left; font-size: 15px;}
+.box > .price {float: right; color: #222;}
+
+.hover2 {position: absolute; top: 0; left: 0; width: 219px; height: 100%; background-color: rgba(0,0,0,.8);; padding: 20px; color: white; opacity: 0; z-index: 5;}
+
+.blog-link:hover > .hover2 { opacity: 1;}
+
+@media (min-width:1200px){
+    .blog-wrap.col-lg-2{
+        width: 20%;
+    }
+}

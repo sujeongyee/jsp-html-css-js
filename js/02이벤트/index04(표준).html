@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id = "btn">표준이벤트</button>
+
+    <script>
+        var btn = document.getElementById ("btn");
+        
+        //1st  이해 잘하라고 해본겨
+        // btn.addEventListener('click', test); // () 붙이지 마.
+        // function test(){
+        //     alert('클릭했수다');
+        // }
+
+
+        // 정석
+        btn.addEventListener('click',function(){
+            alert('럴수럴수이럴수이런방법이!');
+        })
+
+
+    </script>
+
+    <button id = "btn2">표준이벤트는 동일이벤트 트리거가 됩니다.</button>
+
+    <script>
+        var btn2 = document.getElementById("btn2");
+        //기본이벤트는 동일이벤트 체이닝 x
+        btn2.onclick = function(){
+            alert('1번 이벤트');
+        }
+        btn2.onclick = function(){
+            alert('2번 이벤트');
+        }
+
+
+
+        btn2.addEventListener('click',function(){alert('1번이벤트');})
+        btn2.addEventListener('click',function(){alert('2번이벤트');})
+
+    </script>
+
+    
+</body>
+</html>

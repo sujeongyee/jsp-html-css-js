@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        fetch('hi.json').then(function(response){
+            return response.json(); // json => 오브젝트
+        }).then(function(json){
+            var obj = json;
+            console.log(obj);
+        })
+
+
+        //xml데이터 읽기
+
+        fetch('hi.xml').then(function(response){
+            return response.text();
+        }).then(function(data){
+            return new DOMParser().parseFromString(data,'text/html');
+        }).then(function(data){
+            console.log(data);
+            var arr = data.querySelectorAll('data');
+            console.log(arr);
+            for(var i = 0 ; i < arr.length ; i++){
+                var name = arr[i].querySelector('name');
+                var version = arr[i].querySelector('version');
+                var price = arr[i].querySelector('price');
+                console.log(name.innerHTML,version.innerHTML,price.innerHTML);
+            }
+        })
+
+
+
+
+
+
+    </script>
+
+    
+    
+</body>
+</html>

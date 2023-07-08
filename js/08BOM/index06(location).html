@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id ="btn">이동</button>
+    <button onclick="history.go(1)">앞으로가기</button>
+    <script>
+        var btn = document.getElementById("btn");
+        btn.onclick = function(){
+            location.href = 'index06.html';
+
+            //replaceState - 기록을 변경
+            history.replaceState({data:'x'},null,null); // 데이터, 제목, url주소
+        }
+        console.log(history.state);
+        
+        if(history.state == null){
+            alert('경고창');
+        }
+
+        //alert('경고창');
+
+        //reload는 새로고침 (막쓰면 안됩니다 진짜 필요할때만)
+        /*
+        setInterval(function(){
+            location.reload();
+        },5000);
+        */
+
+
+
+
+    </script>
+    
+
+</body>
+</html>

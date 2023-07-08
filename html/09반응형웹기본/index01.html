@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 768px 이상에서만 동작하는 디자인*/
+        @media (min-width : 768px) {
+            /* css문법 */
+            .box {
+                background-color: blue;
+            }
+            /*css...*/
+        }
+        /*767px 이하에서만 동작하는 디자인*/
+        @media (max-width : 767px) {
+            .box{
+                background-color: red;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class = "box">
+        내용...
+    </div>
+    
+</body>
+</html>

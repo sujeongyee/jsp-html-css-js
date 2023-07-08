@@ -1,0 +1,43 @@
+/*디자인 시작전에 공통적으로 선언*/
+
+* {
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+body, html {
+    font-family:'omyu_pretty';
+    font-size: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul, li, ol, dd, dl {
+    list-style: none;
+    text-decoration: none;
+}
+
+input, textarea, select, button {
+    /* 브라우저 별로 기본디자인을 제거해서 동일한 디자인으로 보여질 수 있도록 선언 */
+    /* -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; */
+    /*border: none;*/
+}
+
+.form-control {border-radius: 0;}
+.btn {border-radius: 0;}
+
+.form-control:focus {
+    border-color: #222;
+    box-shadow: none;
+}

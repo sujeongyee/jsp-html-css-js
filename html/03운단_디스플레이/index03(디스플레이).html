@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box > div {display: inline;}
+        .box2 > span,
+        .box2 > strong,
+        .box2 > small {
+            display:block;
+        }
+        .box3 > a {
+            display: inline-block;/*인라인배치를 하되, 블럭 속성을 가지게 함*/
+            width: 100px;
+            height: 100px; 
+
+        }
+        .box4{
+            display : none; /*안보이게함*/
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class = "box">
+        <div>블럭</div>
+        <div>블럭</div>
+        <div>블럭</div>
+    </div>
+
+    <div class = "box2">
+        <span>인라인</span>
+        <strong>인라인</strong>
+        <small>인라인</small>
+    </div>
+
+    <div class="box3">
+        <a href="#">홈</a>
+        <a href="#">게시판</a>
+        <a href="#">마이페이지</a>
+    </div>
+    
+    <div class="box4">
+        display 넌~
+    </div>
+
+
+</body>
+</html>

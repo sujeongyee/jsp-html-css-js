@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            border: 1px solid hsl(0, 0%, 47%);
+            width:600px;
+            /*1st*/
+            /*자식을 float 했으면 감싸줄 부모영역에 둘중 택1 하여 선언*/
+            /* overflow: hidden; */
+            height: 130px;
+        }/*2nd*/
+        .box:after {
+            content:"" ; display: block; clear: both;
+        }
+        .box > div {
+            float: left;
+            width: 25%;
+            height: 130px;
+            text-align: center;
+            border: 1px solid #777;
+            box-sizing: border-box;
+            line-height: 130px;
+        }
+
+        
+        
+    </style>
+</head>
+<body>
+
+    
+   <div class = "box">
+        <div>박스1</div>
+        <div>박스2</div>
+        <div>박스3</div>
+        <div>박스4</div>
+   </div>
+   <br/>
+   <style>
+        ul,li {padding: 0; margin: 0; list-style: none;}
+        .box2{
+            border: 1px solid #777;
+            width: 500px;
+            height: 130px;
+            line-height: 130px;
+            
+        }
+        .box2:after {
+            content: ""; display:block; clear: both;
+        }
+        .box2 > li {
+            float: right;
+            width: 20%;
+            border: 1px solid #777;
+            box-sizing: border-box;
+            height: 130px;
+            text-align: center;
+        }
+   </style>
+
+   <ul class = "box2">
+     <li>박스1</li>
+     <li>박스2</li>
+     <li>박스3</li>
+     <li>박스4</li>
+     <li>박스5</li>
+    <ul/>
+    
+</body>
+</html>

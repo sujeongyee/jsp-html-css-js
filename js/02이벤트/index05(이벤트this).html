@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 태그에서의 this는 자기자신-->
+
+    <button onclick="check(this)">버튼의 이벤트 </button>
+
+    <script>
+        function check(a){
+            //체크하면 태그 사이의 값을 가져올수 있도록 (태그 객체에 접근하기)
+            
+            console.log(a.innerHTML); // 태그 사이의 값을 가져옴
+            a.innerHTML = "얍!"; // 클릭하면 태그 사이 값이 바뀐다..?
+        }
+    </script>
+
+    <button id = "btn">이벤트 함수안에서 this</button>
+
+    <script>
+        //js에서 this의 의미 - 선언된 위치에 따라서 달라집니다.(랙시컬스코프)
+
+        var x = 1;
+        function xxx() {
+            var x = 10;
+            console.log(this); // 윈도우 객체.. 최고 부모님!
+            console.log(x); // 10
+            console.log(this.x); // 1
+        }
+        xxx();
+
+        //이벤트 함수안에서 this (태그 자신)
+
+        var btn = document.getElementById("btn");
+        btn.onclick = function(){
+            console.log(this); // 태그 자신
+        }
+
+
+    </script>
+    
+</body>
+</html>

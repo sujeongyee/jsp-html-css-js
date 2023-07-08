@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {padding: 0; margin: 0;}
+        .wrap {border: 1px solid #777; width: 500px; margin: 0 auto; position: relative; padding: 10px;}
+        .profile {position: absolute; left: 10px; top: 10px;}
+        .content {padding-left: 60px;}
+        .content textarea {width: 100%; box-sizing: border-box; resize: vertical; min-height: 100px;}
+        .control {overflow: hidden;}
+        .control .left {float : left; display: block;}
+        .control .right {float: right;}
+        .content .left input {display: block; width: 100px;}
+        .content .left input:nth-child(2) {margin-top: 3px;}
+    </style>
+</head>
+<body>
+
+    <div class = "wrap">
+        <div class = "profile">
+            <img src = "img/bgimg.png" alt = "" width="50">
+        </div>
+
+        <div class = "content">
+            <textarea></textarea>
+            <div class = "control">
+                <div class = "left">
+                    <input type = "text">
+                    <input type = "text">
+                </div>
+                <button class = "right">등록하기</button>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,134 @@
+
+header {border-top: 3px solid #00d344;}
+header .wrap { border-bottom: 1px solid #ddd;}
+header .wrap .top {width: 1008px; margin: 0 auto; overflow: hidden;}
+header .wrap .top .top_left {float: left; padding: 10px 8px; font-size: 12px; color: #777;}
+header .wrap .top .top_right {float: right;}
+
+.top_right ul {overflow: hidden;}
+.top_right ul li {display: inline; border-left: 1px solid #ddd;}
+.top_right ul li a {display: inline-block; padding: 10px 8px; font-size: 12px; text-decoration: none;}
+
+header .wrap .mid {width: 1008px; margin: 0 auto; overflow: hidden;}
+
+.wrap .mid .left {float: left;}
+.wrap .mid .right{float: right; margin-top: 10px;}
+.wrap .mid fieldset {
+    width: 330px;
+    height: 40px;
+    margin: 36px 0 0 11px;
+    background-image: url(melon/melon_search.png);
+    border: none;
+    overflow: hidden;
+}
+.wrap .mid fieldset > input{
+    float: left;
+    width: 260px;
+    height: 25px;
+    margin: 7px 0 0 18px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+.wrap .mid fieldset > button{
+    float: right;
+    height: 40px;
+    width: 45px;
+    background-image: url(melon/melon_btn.png);
+    border: none;
+    background-color: white;
+}
+
+.wrap .bot {overflow: hidden; width: 1008px; margin: 0 auto;}
+.wrap .bot .main_gnb {float: left;}
+.wrap .bot .sub_gnb {float: right;}
+
+.main_gnb li ,.sub_gnb li {display: inline-block;}
+.main_gnb li a,.sub_gnb li a {display: block; color: #000; text-decoration: none; padding: 10px 5px; font-size: 12px;}
+
+
+
+
+
+section .wrap {width: 1008px; margin: 0 auto; margin-top: 40px;}
+
+section .content {overflow: hidden;}
+section .content .list_wrap {width: 480px; float: left;}
+section .content .slide_wrap {width: 236px; float: left;}
+section .content .user_wrap {width: 280px; float: left;}
+
+.list_wrap ul {overflow: hidden;}
+.list_wrap ul li {float: left; width: 33.333%; position: relative;}
+
+.list_wrap ul li a {position: relative;}
+.list_wrap ul li a .singer {
+    position: absolute;
+    left: 0;
+    bottom: 4px;    
+    color: white;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    height: 22px;
+    line-height: 22px;
+    opacity: 0.7;
+}
+.list_wrap ul li .hover_cont { 
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 155px;
+    height: 155px;
+    background-color: black;
+    opacity: 0; /* 호버가 닿으면 1로 변경*/
+    z-index: 10; /* 가장 위쪽*/
+    transition: opacity .5s ease-in-out ;
+}
+
+.list_wrap ul li .hover_cont a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    display: inline-block;
+    padding-top: 50px;
+    width: 100%;
+    text-align: center;
+    
+}
+
+/* 호버 */
+.list_wrap ul li:hover > .hover_cont {
+    opacity: 1;
+    
+}
+
+.slide_wrap {margin-left: 4px;}
+
+.user_wrap {margin-left: 8px; height: 118px;}
+.user_wrap > .login_wrap {
+    border: 1px solid #ddd;
+    padding: 0 17px;
+    height: 117px;
+}
+
+.user_wrap > .promotion_wrap {
+    margin-top: 8px;
+}
+
+.login_wrap .top {overflow: hidden; padding: 24px 0 15px 0; height: 39px; box-sizing: border-box;}
+.login_wrap .top .left{float: left; font-size: 11px; color: #939393;}
+.login_wrap .top .right{float: right; font-size: 11px; color: #939393;}
+
+.login_wrap > .login_btn {
+    background-color: #00d344;
+    color: white;
+    width: 100%;
+    border: none;
+    height: 42px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>할일 목록 만들기</h3>
+
+    <form class = "myForm">
+        <h3 class= "nameTitle"></h3>
+        <input type = "text" placeholder="이름을 입력하세요" class = "nameInput">
+        <button type = "button" id = "nameBtn">확인</button>
+    </form>
+
+    <form class = "todoForm">
+        <input type = "text" placeholder="할일을 작성하세요" class = "todoInput">
+        <button type = "button" id = "todoBtn">확인</button>
+        <ul class = "todoList">
+            
+        </ul>
+    </form>
+
+    <script>
+        var myForm= document.querySelector(".myForm");
+        var nameTitle= myForm.querySelector('.nameTitle');
+        var nameInput= myForm.querySelector('.nameInput');
+        var nameBtn= myForm.querySelector('#nameBtn');
+
+        nameBtn.addEventListener('click',function(){
+            nameTitle.innerHTML=nameInput.value+'님 안녕하세요';
+            nameInput.style.display = 'none';
+            nameBtn.style.display = 'none';
+        });
+        
+        var todoForm = document.querySelector(".todoForm");
+        var todoInput = todoForm.querySelector(".todoInput");
+        var todoBtn = todoForm.querySelector("#todoBtn");
+        var todoList = todoForm.querySelector(".todoList");
+
+        todoBtn.addEventListener('click',function(){
+
+            var text = todoInput.vlalue; // 값
+            todoInput.value = '';
+            var li = document.createElement('li');
+            li.innerHTML = text;
+
+            var button = document.createElement('button');
+            button.innerHTML = '삭제';
+            button.type = 'button';
+
+            //button
+            button.onclick = del;
+
+            li.appendChild(button);
+            todoList.appendChild(li);
+
+        });
+
+        function del(){
+            remove()
+        }
+
+
+    </script>
+
+    <button type = "button" onclick = "add()">버튼</button>
+
+    
+</body>
+</html>

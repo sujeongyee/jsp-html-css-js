@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--가상선택자는 특정동작에서 디자인이 적용됩니다.-->
+    <style>
+        /* 마우스 오버시 */
+        .a1 > li > a {color: black;}
+        .a1 > li > a:hover {color: darksalmon;}
+        /* 포커스시 클릭*/
+        .a2 > input:focus {border-color: thistle; outline: none;}
+        /* 클릭시 */
+        .a3:active {color: hotpink;}
+        
+      </style>
+
+</head>
+<body>
+    <ul class="a1">
+        <li><a href = "">목록</a></li>
+        <li><a href = "">목록</a></li>
+        <li><a href = "">목록</a></li>
+        <li><a href = "">목록</a></li>
+    </ul>
+
+    <div class="a2">
+        <input type = "text">
+    </div>
+    
+    <p class="a3">엑티브</p>
+</body>
+</html>

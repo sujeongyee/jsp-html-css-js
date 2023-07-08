@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .movieList{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 1800px;
+            padding:30px;
+            margin: 0 auto;
+            
+        }
+
+        .movieList > .movie {
+            flex-basis: 33.3333%;         
+            padding: 20px;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .movieList > .movie > img {
+            position: absolute;
+            left: 1;
+            top:-21px;
+        }
+        .movieList > .movie .inner {
+            padding-left: 250px;
+        }
+
+        .movieList .movie .summary {
+            height: 200px;
+            overflow: hidden;
+        }
+    </style>
+
+
+</head>
+<body>
+
+
+    <div class = "movieList">
+    <!--
+        <div class = "movie">
+            <img src = "">
+            <div class = "inner">
+                <h3>제목</h3>
+                <p>줄거리</p>
+                <ul>
+                    <li>장르</li>
+                    <li>장르</li>
+                </ul>
+            </div>
+        </div>                                
+        -->
+    </div>
+
+
+    <!-- https://raw.githubusercontent.com/yopy0817/data_example/master/hello.json --> 
+    <script>
+        /*
+        var path = 'https://raw.githubusercontent.com/yopy0817/data_example/master/hello.json';
+        fetch(path).then(function(response){
+            return response.json();
+        }).then(function(data){
+            console.log(data);
+            var arr1 = Object.keys(data);
+            var arr2 = Object.values(data);
+            for(var i = 0 ; i < arr1.length ; i++){
+                console.log(arr1[i] +' : '+ arr2[i]);
+            }
+        })
+        */
+
+        fetch('https://yts.mx/api/v2/list_movies.json?').then(function(response){
+            return response.json();
+        })
+        .then(function(result){
+            //var arr = data['data']['movies']; 1st
+            var arr = result.data.movies;
+            console.log(arr);
+            var movieList = document.querySelector('.movieList');
+            var sum = "";
+            for(var i = 0 ; i < arr.length ; i++){
+                //medium_cover_image , title , summary , genres
+                var img = arr[i].medium_cover_image;
+                var title = arr[i].title;
+                var summary = arr[i].summary;
+                var genres = arr[i].genres;
+
+                console.log(genres);
+                //var genres2 = genres.split(',');
+
+                sum+='<div class = "movie">';
+                sum+='<img src = "'+img+'">';
+                sum+='<div class = "inner">';
+                sum+='<h3 class = "title">'+title+'</h3>';
+                sum+='<p class = "summary">'+summary+'</p>';
+                sum+='<ul class = "genres">';
+                
+                for(var j in genres){
+                    sum+='<li>' + genres[j] + '</li>';
+                }
+                sum+='</ul>';
+                sum+='</div>';
+                sum+='</div>';
+            }
+            movieList.innerHTML = sum;
+        })
+       
+    
+    </script>
+    <!--https://yts.mx/api/v2/list_movies.json-->
+   
+</body>
+</html>

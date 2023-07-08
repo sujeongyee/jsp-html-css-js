@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- alt + shift + a 범위주석-->
+    <style>
+        b {color: red;}
+        ul,li {list-style: none;} /*ul과 li 둘다 선택*/
+        #a1 {color: aqua;}
+        .a1 {color: blueviolet;}
+    </style>
+
+</head>
+<body>
+    
+    <b>태그</b>
+    <b>태그</b>
+    <b>태그</b>
+    
+    <ul>
+        <li>태그</li>
+    </ul>
+
+    <p id="a1">태그(id는 화면에서 고유합니다)</p>
+    <p class="a1">태그(클래스 중복이름 선언이 됩니다)</p>
+
+    <style>
+        .box p{color: violet;}
+        .box > p {color: crimson;}     
+    </style>
+
+    <div class = "box">
+        <p>직계자식</p>
+        <p>직계자식</p>
+        <div>
+            <p>자식</p>
+            <p>자식</p>
+         </div>
+    </div>
+    <p>자식</p>
+
+    <style>
+        input[type='text']{color: darkcyan;}
+    </style>
+    <input type = "text">
+
+
+    
+</body>
+</html>

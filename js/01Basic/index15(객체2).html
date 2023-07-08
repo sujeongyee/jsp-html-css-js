@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //함수로 만드는 객체의 모형 (많이 사용 x)
+
+        function person(name,age){
+            this.name = name;
+            this.age = age;
+            this.info = function(){
+                console.log(this.age,this.name)
+            }
+        }
+
+        var obj = new person('홍길동',11);
+        console.log(obj);
+        obj['info']();
+        new person('신사임당',20)['info']();
+        
+
+    </script>
+    
+</body>
+</html>

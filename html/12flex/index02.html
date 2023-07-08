@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column; /*justify content는 주축에 따라서 정렬이 바뀜*/
+
+            justify-content: flex-start; /*앞에서부터 나란히*/
+            justify-content: space-between ; /* 양끝으로 딱붙이고 동일한 간격*/
+            justify-content: space-around; /*모두 동일한 간격으로*/
+            justify-content: center; /*가운데로 모임*/
+
+
+            background-color: yellow;
+            padding: 20px;
+            height: 500px;
+        }
+        .container .item {
+            background-color: rgb(255, 255, 255);
+            margin: 20px;
+        }
+    </style>
+
+    <h3>justify-content 주축정렬</h3>
+
+    <div class = "container">
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+    </div>
+    
+    
+    <hr/>
+
+    <style>
+        .container2 {
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /*교차축 정렬 (2줄 이상일때)*/
+            align-content:stretch; /*기본값! 높이가 늘려짐*/
+            align-content:flex-start; 
+            align-content: flex-end;
+            align-content: center; /*가운데로 모인다*/
+            align-content: space-between; /*양끝 붙이고 균등간격*/
+            align-content: space-around; /*모두 균등하게*/
+            background-color: yellow; 
+            padding: 20px;
+            height: 500px;
+        }
+        .container2 .item {
+            background-color: rgb(255, 255, 255);
+            margin: 10px;
+        }
+    </style>
+
+    <h3>align-content 교차축정렬(두줄이상)</h3>
+
+    <div class = "container2">
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+    </div>
+    
+    
+    <hr/>
+
+
+    <style>
+        .container3 {
+            display: flex;
+
+            align-items: flex-start;
+            align-items: flex-end;
+            align-items: center;
+            align-items: baseline; /*글자 기준으로 교차축 정렬을 맞춤*/
+
+            flex-wrap: nowrap;
+            background-color: yellow; 
+            padding: 20px;
+            height: 500px;
+        }
+        .container3 .item {
+            background-color: rgb(255, 255, 255);
+            margin: 10px;
+        }
+    </style>
+
+    <h3>align-items 교차축정렬(한줄일때)</h3>
+
+    <div class = "container3">
+        <div class = "item" style = "height: 50px; line-height: 50px;">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+        <div class = "item">flex</div>
+    </div>
+    
+    
+    <hr/>
+
+    <style>
+        .box{margin: 0 auto; height: 500px; width: 500px; display: flex; background-color: pink;justify-content: center; align-items: center;}
+        .box > .item {height: 50px; width: 50px; background-color: white;}
+    </style>
+    
+
+    <div class = "box">
+
+        <div class = "item">정 가운데로</div>
+
+    </div>
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //setter 역할
+        /*
+        function obj(){
+            var name = '홍길동';
+
+            return function(aaa){
+                name = aaa;
+                return name;
+            }
+        }
+
+        var result = obj();
+        var name = result('신사임당');
+        console.log(name);
+        */
+
+
+        function person(){
+            var name = '홍길동';
+
+            return {
+                'setName':function(aaa){
+                    name = aaa;
+                },
+                'getName':function(){
+                    return name;
+                }
+            }
+        };
+
+        var obj = person();
+        obj.setName('이순신');
+        var name = obj.getName();
+        console.log(name);
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .func1 {width: 300px; height: 300px; background-color: red;}
+        .func2 {width: 200px; height: 200px; background-color: blue;}
+        .func3 {width: 100px; height: 100px; background-color: yellow;}
+        
+    </style>
+</head>
+<body>
+    <div class = "func1">
+        <div class = "func2">
+            <div class = "func3">
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        //이벤트가 실행되는 순서 : 캡쳐링 => 타켓 => 버블링
+        //캡쳐링 = 이벤트를 탐색하러 내려오는 과정
+        //버블링 = 부모, 자식 모두에 이벤트가 걸려있을 때 자식=> 부모님으로 올라가는 과정
+
+        var func1 = document.querySelector(".func1");
+        var func2 = document.querySelector(".func2");
+        var func3 = document.querySelector(".func3");
+
+        // func1.onclick = function(){
+        //     alert('fun1 실행');
+        // }
+        // func2.onclick = function(){
+        //     alert('fun2 실행');
+        //     event.stopPropagation(); // 버블링 종료!
+        // }
+        // func3.onclick = function(){
+        //     alert('fun3 실행');
+        // }
+
+        //이벤트 캡쳐링 페이즈 (부모 -> 자식) 순으로 실행
+        //이벤트리스너만 가능합니다.
+
+        func1.addEventListener('click',function(){
+            alert('fun1 실행');
+        } , true);
+        func2.addEventListener('click',function(){
+            alert('fun2 실행');
+        } , true);
+        func3.addEventListener('click',function(){
+            alert('fun3 실행');
+        } , true);
+
+    </script>
+</body>
+</html>

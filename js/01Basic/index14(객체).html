@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //js에서 객체는 {}로 표기하고 , 자바의 맵과 같습니다.
+
+        var person = {
+            name: '홍길동',
+            age : 20,
+            arr:[1,2,3] 
+        };
+
+        console.log(typeof person); // object
+
+        //Js객체에 접근하는 방식은 2가지 있습니다. (둘다 아셔야해요)
+        // .으로 접근
+        console.log(person.name);
+        console.log(person.age);
+        console.log(person.arr);
+        console.log(person.arr[0]); // 객체안의 배열에 접근
+
+        // 객체['키'] - 보통 이렇게 씁니다
+        console.log(person['name']);
+        console.log(person['age']);
+        console.log(person['arr']);
+        console.log(person['arr'][0]);
+        
+        
+        console.log('--------------------');
+
+        //객체안에 객체 
+        var exam = {kor : 30, eng : 40};
+        var park = {name : '박수' , age : 20, exam : exam };
+
+        console.log(park['exam']['kor']);
+
+        //객채안에 함수
+        var obj = {func:function(){console.log('호출됨');}};
+
+        //obj['func']();
+        obj.func(); // 이게 더 좋은 문법
+
+        //리스트안에 객체
+        var arr = [
+            {id : 1, name : '홍길동'},
+            {id : 2, name : '이순신'},
+            {id : 3, name : '신사임당'}
+        ];
+        console.log(arr);
+
+        for(var i = 0 ; i< arr.length ; i++){
+            console.log('id는 : '+arr[i]['id']+', 이름은 : ' + arr[i]['name']);
+        }
+
+        for(var i in arr){
+            console.log('id는 : ' + arr[i]['id']+ ', 이름은 :' + arr[i]['name']);
+        }
+
+        
+
+
+    </script>
+    
+</body>
+</html>

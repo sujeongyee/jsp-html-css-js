@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap" rel="stylesheet">
+
+
+
+    <style>
+
+        * {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 14px;
+            font-weight: 500px; /*bold;*/
+            color: black;
+        }
+
+
+        .box {
+            border: 1px solid #777;
+            margin: 0 auto;
+            width: 800px;
+            overflow: hidden;
+            height: 70%;
+        }
+        .box .left1 {
+            float: left; 
+        }
+        .box .right1 {
+            float: right;
+            border: 1px solid #777;
+            box-sizing: border-box;
+            width: 50%;
+            height: 70%;
+        }
+        .title{
+            height:100px;
+            border:1px solid #777;
+            box-sizing: border-box;
+        }
+        .price {
+            overflow: hidden;
+            height:15%;
+            border: 1px solid #777;
+            box-sizing: border-box;
+        }
+        .price .left {float: left;}
+        .price .right {float: right;}
+
+        .btn{
+            overflow: hidden;
+            height: 15%;
+            border: 1px solid #777;
+            box-sizing: border-box;
+        }
+        .btn .left {float: left; width: 50%;}
+        .btn .right{float:right; width: 50%;}
+
+
+    </style>
+
+
+</head>
+<body>
+    <h3> 과제2 </h3>
+    <div class = "box">
+        <div class = "left1">
+            <img src="img/bgimg.png">
+        </div>
+        <div class = "right1">
+            <div class = "title">
+                제목 : 패딩바텀 50px;<br/>
+                내용 : ~~~
+            </div>
+            <div class = "price">
+                <span class = "left">가격</span>
+                <span class = "right">10000원</span> 
+            </div>
+            <div class = "btn">
+                <button class = "left">장바구니</button>
+                <button class = "right">구매하기</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

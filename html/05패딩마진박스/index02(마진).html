@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            width:500px;
+            height: 100px;
+            border: 1px solid #777;
+            background-color: rgb(255, 202, 202);
+            
+            margin: 50px; /*상하좌우*/
+           /*  margin: 20px 40px; 상하,좌우
+            margin: 10px 20px 40px; 위,좌우,아래 
+            margin: 10px 20px 30px 40px; 위에서부터 시계방향  */
+        }
+            .box {
+             text-align: center;
+            /*상자의 너비가 반드시 지정이 되어야함*/
+             margin: 0 auto;   
+            }
+        
+        
+    </style>
+</head>
+<body>
+
+    <p>
+        마진은 바깥여백 입니다.
+        상자간 거리를 넓힐때
+        마진은 겹칩니다.
+    </p>
+
+    <p class = "box">
+        마진은 바깥여백 입니다.
+        상자간 거리를 넓힐때
+        마진은 겹칩니다.
+    </p>
+    
+</body>
+</html>
